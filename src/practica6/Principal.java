@@ -21,6 +21,7 @@ public class Principal {
         // TODO code application logic here
         ArrayList<Cliente> cli = new ArrayList<Cliente>();
         ArrayList<CuentaBancaria> cue = new ArrayList<CuentaBancaria>();
+        ArrayList<String> tran = new ArrayList<String>();
         Scanner teclado = new Scanner(System.in);
         System.out.println("Bienvenido elija la opción \n 1.Crear Cliente \n 2.Crear Cuenta"
                 + " \n 3.Ingresar Dinero \n 4.Retirar Dinero \n 5.Modificar Datos Cliente \n 6.Transferir \n 7.Ultimos movimientos");
@@ -160,7 +161,12 @@ public class Principal {
         
                 }
             
+            tran.add("Cuenta " + cuentaOrigen + " Destino " + cuentaDestino + " Saldo " + saldo);
             
+        }else if (opcion == 7){
+            for (int i = 0 ; i < tran.size(); i++){
+                System.out.println(tran.get(i).toString());
+            }
         }
         
         
